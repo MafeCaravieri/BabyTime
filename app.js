@@ -8,6 +8,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const videoContainer = document.getElementById("videoContainer");
     const icons = document.querySelectorAll(".icon");
+
+    const childAge = document.getElementById("childAge");
+    const ageDisplay = document.getElementById("ageDisplay")
+
+    childAge.addEventListener("input", () => {
+        const months = parseInt(childAge.value);
+        let displayText = "";
+
+        if(months < 12){
+            displayText = `${months} meses.`
+        }else{
+            const years = Math.floor(months / 12);
+            displayText = `${years} ano(s).`;
+        }
+          ageDisplay.innerHTML = `<span class="number">${displayText.split(' ')[0]}</span> ${displayText.split(' ')[1]}`;
+    })
+
+    screenTime.addEventListener("input", () => {
+        const totalHours = parseFloat(screenTime.value);
+        const hours = Math.floor(totalHours);
+        const minutes = Math.round((totalHours - hours) * 60); // arredonda pra evitar decimais
+
+        let display = "";
+        if(hours > 0) display += `${hours}h `;
+        if(minutes > 0) display += `${minutes} minutos`;
+        if(hours === 0 && minutes === 0) display = "0 minutos";
+
+        timeDisplay.textContent = display;
+    });
     
     enterBtn.addEventListener("click", () => {
         welcomeScreen.classList.remove("active")
@@ -17,10 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
     startBtn.addEventListener("click", () => {
         const nome = document.getElementById("childName").value;
         const idade = document.getElementById("childAge").value;
-        const tempo = document.getElementById("tempoTela").value;
+        const tempo = document.getElementById("screenTime").value;
 
-        if(!idade || !tempo || !nome) {
-            alert("Preencha todos os campos!")
+        if(!nome) {
+            alert("Preencha o nome!")
             return;
         }
 

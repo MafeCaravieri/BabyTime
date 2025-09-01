@@ -32,11 +32,13 @@
         </label>
         <label>
             Idade da Criança:
-            <input type="number" id="childAge" min="1" max="8" placeholder="ex: 4">
+            <input type="range" id="childAge" min="6" max="120" value="6">
+            <span id="ageDisplay">6 meses</span>
         </label> 
         <label>
-            Tempo de tela (minutos):
-            <input type="number" id="tempoTela" min="10" max="180" placeholder="ex: 30">
+            Tempo de tela:
+           <input type="range" id="screenTime" min="0.25" max="2.5" step="0.25" value="0.25">
+            <span id="timeDisplay">15 min</span>
         </label>
         <button id="startBtn">Iniciar BabyTime</button> 
     </div>
