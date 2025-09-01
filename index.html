@@ -58,8 +58,14 @@
 
     <!--Desenhos-->
     <div id="videoContainer" class="hidden">
+        <button id="homeBtn"><i class="fa-solid fa-house" style="color: #ecf4ff;"></i></button>
         <h3>Desenhos Educativos</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/p6cS3B3upZc?si=ShUOBVzcBqghB-0H" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         <iframe id="mainVideo" width="560" height="315" src="https://www.youtube.com/embed/p6cS3B3upZc?si=ShUOBVzcBqghB-0H" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="videoThumbnails">
+            <img src="./assets/img/thumb1.jpg" data-video="https://www.youtube.com/embed/p6cS3B3upZc?si=ShUOBVzcBqghB-0H" alt="Pooh e o Efalante">
+            <img src="./assets/img/thumb2.jpg" data-video="https://www.youtube.com/embed/kw85_Nm0a6A?si=28jb8tXMfSeCZ_iA" alt="Bluey">
+            <img src="./assets/img/thumb3.jpg" data-video="https://www.youtube.com/embed/euggLnYJFvc?si=rzSqH08hTkbqM4Ua" alt="George o Curioso">
+        </div>
     </div>
     
     <script src="./app.js"></script>

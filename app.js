@@ -70,4 +70,21 @@ document.addEventListener("DOMContentLoaded", () => {
            }
         });
     });
+
+    const thumbnails = document.querySelectorAll(".videoThumbnails img");
+    const mainVideo = document.getElementById("mainVideo");
+
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener("click", () => {
+            mainVideo.src = thumb.dataset.video;
+        })
+    })
+
+    const homeBtn = document.getElementById("homeBtn");
+
+homeBtn.addEventListener("click", () => {
+    document.querySelectorAll(".screen").forEach(screen => screen.classList.remove("active"));
+    document.getElementById("kids").classList.add("active");
+    document.getElementById("videoContainer").classList.add("hidden");
+});
 })
