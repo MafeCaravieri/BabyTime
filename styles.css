@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'BubbleBoddyNeue';
+    src: url(./assets/font/bubbleboddyneue-regular\ trial.ttf);
+}
+body{
+    font-family: 'BubbleBoddyNeue';
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    touch-action: manipulation;
+}
+
+#userArea{
+    background-color: white;
+    padding: 50px 10px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 20px #2d2d2d;
+}
+
+.screen {
+    display: none;  
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.logoArea img {
+    width: 60%;
+    margin-bottom: 15px;
+}
+
+.title{
+    font-size: 2.5rem;
+    margin: 0;
+    color: #2d2d2d;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #555555;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #5fb5ee;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
+}
+
+button:active {
+    transform: scale(0.95);
+    background: #fb8500;
+}
+
+label { 
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: #1d3557;
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+
+}
+
+input{
+    margin-top: 8px;
+    padding: 12px;
+    border: 2px solid #457b9d;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    touch-action: manipulation;
+}
+
+button:active{
+    transform: scale(0.95);
+    background: #fb8500;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.icon {
+    background: #f1faee;
+    border: 3px solid #457b9d;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.icon span {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #1d3557
+}
+
+.icon:active {
+    transform: scale(0.95);
+    background: #a8dadc;
+}
+
+.hidden{
+    display: none;
+}
+
+#videoContainer {
+    margin-top: 40px;
+}

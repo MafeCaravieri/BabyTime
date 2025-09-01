@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>BabyTime Demo</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!--Tela Welcome-->
+    <div id="welcome" class="screen active">
+        <div id="userArea">
+        <div class="logoArea">
+            <img src="./assets/img/mascoteLove.png" alt="Mascote BabyTime Coração" class="mascote"/>
+            <h1 class="title">BabyTime</h1>
+            <p class="subtitle">Tempo de Tela Saudável</p>
+        </div>
+        <button class="btn-primary" id="enterBtn">Entrar</button>
+        </div>
+    </div>
+
+    <!--Tela Config-->
+    <div id="config" class="screen">
+        <h2>Configuração Parental</h2>
+        <label>
+            Nome da Criança:
+            <input type="text" id="childName" minlength="4" maxlength="30" placeholder="Insira o nome aqui:">
+        </label>
+        <label>
+            Idade da Criança:
+            <input type="number" id="childAge" min="1" max="8" placeholder="ex: 4">
+        </label> 
+        <label>
+            Tempo de tela (minutos):
+            <input type="number" id="tempoTela" min="10" max="180" placeholder="ex: 30">
+        </label>
+        <button id="startBtn">Iniciar BabyTime</button> 
+    </div>
+    <!--Tela Kids-->
+    <div id="kids" class="screen">
+        <h2 class="title">Babytime</h2>
+        <p class="subtitle">Escolha o que vai fazer hoje!</p>
+        <div class="grid">
+            <div class="icon" data-action="jogos"><i class="fa-solid fa-gamepad"></i><span>Jogos</span></div>
+            <div class="icon" data-action="desenhos"><i class="fa-solid fa-tv"></i><span>Desenhos Animados</span></div>
+            <div class="icon" data-action="brincadeiras"><i class="fa-solid fa-futbol"></i><span>Brincadeiras</span></div>
+            <div class="icon" data-action="artes"><i class="fa-solid fa-palette"></i><span>Artes</span></div>
+            <div class="icon" data-action="perfil"><i class="fa-solid fa-child"></i><span>Perfil</span></div>
+            <div class="icon" data-action="controle"><i class="fa-solid fa-gear"></i><span>Controle</span></div>
+        </div>
+    </div>
+
+    <!--Desenhos-->
+    <div id="videoContainer" class="hidden">
+        <h3>Desenhos Educativos</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/p6cS3B3upZc?si=ShUOBVzcBqghB-0H" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
