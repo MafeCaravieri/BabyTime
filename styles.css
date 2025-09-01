@@ -139,3 +139,56 @@ button:active{
 #videoContainer {
     margin-top: 40px;
 }
+
+@media screen and (min-width: 1180px) and (max-width: 1700px) and (orientation: landscape) {
+    body {
+        background-size: cover;
+        background-position: center;
+        font-size: 1.1rem;
+    }
+
+    .screen {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .icon {
+        padding: 40px;
+        font-size: 3.5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.4rem;
+    }
+
+    button {
+        font-size: 1.4rem;
+        padding: 20px 50px;
+    }
+
+    input {
+        font-size: 1.3rem;
+        padding: 18px 20px;
+        border-radius: 35px;
+    }
+
+    label {
+        font-size: 1.4rem;
+        max-width: 400px;
+    }
+
+    iframe {
+        width: 80%;
+        height: 450px;
+    }
+}
